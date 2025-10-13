@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "name": "Свежая клубника",
+    "price": 500,
+    "image": "https://images.unsplash.com/photo-1570913190149-e2a64af5c30f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "unit": "кг",
+    "description": "Натуральная, сочная и сладкая клубника, собранная вручную с любовью.",
+    "active": true
+  },
+  {
+    "id": 2,
+    "name": "Клубника в корзине",
+    "price": 800,
+    "image": "https://images.unsplash.com/photo-1464454709131-ffd692591ee5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "unit": "корзина",
+    "description": "Идеальный подарок для близких. Красиво, вкусно и натурально.",
+    "active": true
+  },
+  {
+    "id": 3,
+    "name": "Клубника со сливками",
+    "price": 1000,
+    "image": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "unit": "порция",
+    "description": "Нежное сочетание свежей клубники и домашних сливок. Идеальный десерт.",
+    "active": true
+  }
+]

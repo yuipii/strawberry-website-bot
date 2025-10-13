@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Корзина | Ягодный Рай</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+  <!-- Мобильное меню -->
+  <div class="mobile-menu-toggle" id="mobileMenuToggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <header>
+    <div class="container header-container">
+      <div class="logo">
+        <a href="index.html" style="text-decoration: none; color: inherit;">
+          <h1>Ягодный Рай</h1>
+          <p>Наслаждение в каждой ягоде</p>
+        </a>
+      </div>
+      <nav class="main-nav" id="mainNav">
+        <a href="index.html" class="nav-link">Главная</a>
+        <a href="index.html#about" class="nav-link">О нас</a>
+        <a href="index.html#products" class="nav-link">Товары</a>
+        <a href="index.html#contacts" class="nav-link">Контакты</a>
+        <a href="cart.html" class="nav-link cart-link active">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-count" id="cartCount">0</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="cart-container">
+    <div class="container">
+      <h1 class="page-title">Корзина</h1>
+      
+      <div class="cart-content">
+        <div class="cart-items" id="cartItems">
+          <!-- Товары будут добавляться динамически -->
+          <div class="empty-cart" id="emptyCart">
+            <i class="fas fa-shopping-cart"></i>
+            <h3>Ваша корзина пуста</h3>
+            <p>Добавьте товары из каталога</p>
+            <a href="index.html#products" class="cta-button">Перейти к товарам</a>
+          </div>
+        </div>
+
+        <div class="order-summary">
+          <h3>Сводка заказа</h3>
+          <div class="summary-details">
+            <div class="summary-row">
+              <span>Товары:</span>
+              <span id="subtotal">0 ₽</span>
+            </div>
+            <div class="summary-row">
+              <span>Доставка:</span>
+              <span id="delivery">300 ₽</span>
+            </div>
+            <div class="summary-row total">
+              <span>Итого:</span>
+              <span id="total">300 ₽</span>
+            </div>
+          </div>
+
+          <form id="orderForm" class="order-form">
+            <h3>Данные для доставки</h3>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Имя *</label>
+                <input type="text" id="name" name="name" required placeholder="Ваше имя">
+              </div>
+              <div class="form-group">
+                <label for="phone">Телефон *</label>
+                <input type="tel" id="phone" name="phone" required placeholder="+7 (900) 123-45-67">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="your@email.com">
+            </div>
+
+            <div class="form-group">
+              <label for="address">Адрес доставки *</label>
+              <textarea id="address" name="address" required placeholder="Улица, дом, квартира"></textarea>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="date">Дата доставки *</label>
+                <input type="date" id="date" name="date" required min="">
+              </div>
+              <div class="form-group">
+                <label for="time">Время доставки *</label>
+                <select id="time" name="time" required>
+                  <option value="">Выберите время</option>
+                  <option value="09:00-12:00">09:00 - 12:00</option>
+                  <option value="12:00-15:00">12:00 - 15:00</option>
+                  <option value="15:00-18:00">15:00 - 18:00</option>
+                  <option value="18:00-21:00">18:00 - 21:00</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="comment">Комментарий к заказу</label>
+              <textarea id="comment" name="comment" placeholder="Особые пожелания или комментарии"></textarea>
+            </div>
+
+            <div class="payment-methods">
+              <h4>Способ оплаты</h4>
+              <div class="payment-options">
+                <label class="payment-option">
+                  <input type="radio" name="payment" value="cash" checked>
+                  <span>Наличными при получении</span>
+                </label>
+                <label class="payment-option">
+                  <input type="radio" name="payment" value="card">
+                  <span>Картой онлайн</span>
+                </label>
+              </div>
+            </div>
+
+            <button type="submit" class="cta-button submit-order-btn" id="submitOrder">
+              <i class="fas fa-check"></i>
+              Оформить заказ
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer id="contacts">
+    <div class="container footer-content">
+      <div class="footer-info">
+        <h3>Ягодный Рай</h3>
+        <p>Доставка свежей клубники ежедневно с 9:00 до 21:00</p>
+        <p>Семейная ферма с 2013 года</p>
+      </div>
+      <div class="footer-contacts">
+        <h4>Контакты</h4>
+        <a href="https://wa.me/79001234567" class="contact-link whatsapp" target="_blank">
+          <i class="fab fa-whatsapp"></i> WhatsApp: +7 (900) 123-45-67
+        </a>
+        <a href="tel:+79001234567" class="contact-link phone">
+          <i class="fas fa-phone"></i> +7 (900) 123-45-67
+        </a>
+        <a href="mailto:info@yagodniy-ray.ru" class="contact-link email">
+          <i class="fas fa-envelope"></i> info@yagodniy-ray.ru
+        </a>
+      </div>
+      <div class="footer-social">
+        <h4>Мы в соцсетях</h4>
+        <div class="social-links">
+          <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-vk"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2024 Ягодный Рай. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="cart.js"></script>
+</body>
+</html>
