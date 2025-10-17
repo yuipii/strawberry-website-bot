@@ -21,9 +21,9 @@ PRODUCTS_FILE = 'products.json'
 ORDERS_DB = 'orders.db'
 
 # Токен бота и ID чата
-BOT_TOKEN = '8447236082:AAFsWhKH5-IDoTm9pLxoQDjon9gu0-VyMR4'
-SELLER_CHAT_ID = '1069582520'
-ADMIN_CHAT_IDS = ['1069582520']  # Добавляем ID администраторов
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+SELLER_CHAT_ID = os.getenv("SELLER_CHAT_ID")
+ADMIN_CHAT_IDS = os.getenv("ADMIN_CHAT_IDS")  # Добавляем ID администраторов
 
 # Создаем пул потоков для асинхронной отправки
 thread_pool = concurrent.futures.ThreadPoolExecutor(max_workers=3)
